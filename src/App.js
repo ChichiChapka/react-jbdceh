@@ -9,9 +9,12 @@ export default function App() {
     <div>
      
       <MedicalTreatmentPanel placeholder/>
+      <sayhello/>
+   
+     
     </div>
   
-   
+
   );
 
 

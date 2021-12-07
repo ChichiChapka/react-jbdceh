@@ -14,6 +14,9 @@ function MedicalTreatmentPanel() {
   const [name, setName] =React.useState ('');
   const [startDate, setStartDate] = React.useState ('');
 
+//below is to get treatId when needed
+  const display = (e) => {getTreatId()};
+
     return (
   //data entry fields are created here with variables assigned to them and onchange handler passes the value of the input under e.target.value 
       <div>
@@ -25,8 +28,11 @@ function MedicalTreatmentPanel() {
         <input placeholder = "name" value ={name} onChange = {e=> setName (e.target.value)}/>
         <input placeholder = "startDate" value ={startDate} onChange = {e=> setStartDate (e.target.value)} />
         
-      </div> 
       
+       <button onClick ={e => display()}> display records</button>
+      </div> 
+// button should display treatId records
+
     );
   
   }
